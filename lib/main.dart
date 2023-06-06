@@ -48,6 +48,12 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  void navigateToPage(int index) {
+    setState(() {
+      _currentPageIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,27 +66,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text('Page 1'),
               onTap: () {
-                setState(() {
-                  _currentPageIndex = 0;
-                });
+                navigateToPage(0);
                 Navigator.pop(context);
               },
             ),
             ListTile(
               title: Text('Page 2'),
               onTap: () {
-                setState(() {
-                  _currentPageIndex = 1;
-                });
+                navigateToPage(1);
                 Navigator.pop(context);
               },
             ),
             ListTile(
               title: Text('Page 3'),
               onTap: () {
-                setState(() {
-                  _currentPageIndex = 2;
-                });
+                navigateToPage(2);
                 Navigator.pop(context);
               },
             ),
@@ -90,54 +90,14 @@ class _MyHomePageState extends State<MyHomePage> {
       body: IndexedStack(
         index: _currentPageIndex,
         children: [
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Page 1',
-                  style: TextStyle(fontSize: 24),
-                ),
-                SizedBox(height: 20),
-                buildFloatingActionButton(),
-              ],
-            ),
-          ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Page 2',
-                  style: TextStyle(fontSize: 24),
-                ),
-                SizedBox(height: 20),
-                buildFloatingActionButton(),
-              ],
-            ),
-          ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Page 3',
-                  style: TextStyle(fontSize: 24),
-                ),
-                SizedBox(height: 20),
-                buildFloatingActionButton(),
-              ],
-            ),
-          ),
+          Page1(),
+          Page2(),
+          Page3(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentPageIndex,
-        onTap: (index) {
-          setState(() {
-            _currentPageIndex = index;
-          });
-        },
+        onTap: navigateToPage,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -150,6 +110,58 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.account_box),
             label: 'Page 3',
+          ),
+        ],
+      ),
+      floatingActionButton: buildFloatingActionButton(),
+    );
+  }
+}
+
+class Page1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Page 1',
+            style: TextStyle(fontSize: 24),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Page2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Page 2',
+            style: TextStyle(fontSize: 24),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Page3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Page 3',
+            style: TextStyle(fontSize: 24),
           ),
         ],
       ),
