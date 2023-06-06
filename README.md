@@ -9,21 +9,21 @@ Ostad Module 05 Assignmnet
 ## Screenshots
 
 
-1. **Screenshot 1:** First Page.
+## Screenshots
 
-   ![Screenshot 1](screenshot/screen01.png)
+Add screenshots of your project to showcase its functionality or user interface. You can include up to three screenshots. To add the screenshots, follow the instructions below:
 
-2. **Screenshot 2:** Second Page.
+1. **Screenshot 1:** Describe the content or purpose of the first screenshot and insert it here.
 
-   ![Screenshot 2](screenshot/screen02.png)
+    <img src="screenshot/screen01.png" alt="Screenshot 1" width="400" height="300">
 
-3. **Screenshot 3:** Third Page.
+2. **Screenshot 2:** Describe the content or purpose of the second screenshot and insert it here.
 
-   ![Screenshot 3](screenshot/screen03.png)
+    <img src="screenshots/screenshot2.png" alt="Screenshot 2" width="400" height="300">
 
-4. **Screenshot 4:** Drawer Page.
+3. **Screenshot 3:** Describe the content or purpose of the third screenshot and insert it here.
 
-   ![Screenshot 4](screenshot/screen04.png)
+    <img src="screenshots/screenshot3.png" alt="Screenshot 3" width="400" height="300">
 
 ## Installation
 
