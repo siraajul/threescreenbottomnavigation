@@ -15,7 +15,7 @@ Add screenshots of your project to showcase its functionality or user interface.
 
 1. **Screenshot 1:** Describe the content or purpose of the first screenshot and insert it here.
 
-    <img src="screenshot/screen01.png" alt="Screenshot 1" width="50" height="200">
+    <img src="screenshot/screen01.png" alt="Screenshot 1" width="250" height="500">
 
 2. **Screenshot 2:** Describe the content or purpose of the second screenshot and insert it here.
 
