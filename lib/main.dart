@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Tabbed App',
+      title: 'Assignment App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tabbed App'),
+        title: Text('Assignment App'),
       ),
       drawer: Drawer(
         child: ListView(
@@ -148,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'Page 2',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(Icons.account_box),
             label: 'Page 3',
           ),
         ],
